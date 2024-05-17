@@ -51,8 +51,6 @@
                     },
                     {
                         "label": "页面B",
-                        "badge": 3,
-                        "badgeClassName": "bg-info",
                         "schema": {
                             "type": "page",
                             "title": "页面B",
@@ -63,18 +61,15 @@
                         "label": "列表示例",
                         "url": "/crud",
                         "rewrite": "/crud/list",
-                        "icon": "fa fa-cube",
                         "children": [
                             {
                                 "label": "列表",
                                 "url": "/crud/list",
-                                "icon": "fa fa-list",
                                 "schemaApi": "get:/pages/crud-list.json"
                             },
                             {
                                 "label": "新增",
                                 "url": "/crud/new",
-                                "icon": "fa fa-plus",
                                 "schemaApi": "get:/pages/crud-new.json"
                             },
                             {

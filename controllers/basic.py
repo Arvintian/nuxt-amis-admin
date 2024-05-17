@@ -3,10 +3,10 @@ from nuxt.utils import make_sync_response
 from nuxt import Blueprint
 
 
-bp_login = Blueprint("bp_login")
+bp_basic = Blueprint("bp_basic")
 
 
-@bp_login.route("", methods=["POST"])
+@bp_basic.route("/login", methods=["POST"])
 def login(request: Request):
     username, password = request.json.get("username"), request.json.get("password")
     if "{}:{}".format(username, password) != "admin:admin":
@@ -23,3 +23,14 @@ def login(request: Request):
     })
     rsp.set_cookie('token', 'amis', max_age=3600)
     return rsp
+
+
+@bp_basic.route("/userinfo", methods=["GET"])
+def userinfo(request: Request):
+    return {
+        "status": 0,
+        "msg": "success",
+        "data": {
+            "username": "amis"
+        }
+    }

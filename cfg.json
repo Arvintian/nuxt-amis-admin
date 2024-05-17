@@ -1,6 +1,7 @@
 {
     "middlewares": {
         "sync": [
+            "middlewares.auth.AuthMiddleware",
             "middlewares.model.ModelMiddleware",
             "middlewares.panic.PanicMiddleware"
         ],

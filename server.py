@@ -1,5 +1,5 @@
 from nuxt import register_blueprint
-from controllers.login import bp_login
+from controllers.basic import bp_basic
 
 
-register_blueprint(bp_login, url_prefix="/api/login")
+register_blueprint(bp_basic, url_prefix="/api/basic")
